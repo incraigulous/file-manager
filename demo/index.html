@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>File Manager Demo</title>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/file-manger.css">
+    </head>
+    <body>
+        <div class="container">
+            <br />
+            <pre id="scratch-pad" class="hidden"></pre>
+            <br />
+            <div class="btn-set">
+                <div class="btn btn-success" id="open-btn">
+                    Open
+                </div>
+                <div class="btn btn-danger" id="close-btn">
+                    Close
+                </div>
+                <div class="btn btn-warning" id="toggle-btn">
+                    Toggle
+                </div>
+            </div>
+
+            <br />
+            <div id="demo">
+                <file-manager :files="files"></file-manager>
+            </div>
+        </div>
+        <script src="/demo/js/build.js"></script>
+    </body>
+</html>

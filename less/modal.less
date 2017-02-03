@@ -1,0 +1,38 @@
+@import "./mixins";
+@import "./variables";
+#file-manager .file-manager-modal {
+  z-index: @file-manager-modal-z;
+  background-color: @file-manager-background;
+  #file-manager > .fit-fixed;
+  .file-manager-modal-inner {
+    #file-manager > .fit(@file-manager-modal-padding * 4, @file-manager-modal-padding, @file-manager-modal-padding, @file-manager-modal-padding);
+    .header {
+      padding: @file-manager-modal-padding;
+      position: relative;
+      background-color: @file-manager-heading-background;
+      text-transform: uppercase;
+
+      > .title {
+        font-size: @file-manager-title-size;
+        color: @file-manager-heading-color;
+      }
+      > .close {
+        #file-manager > .right(@file-manager-spacing-base);
+        width:@file-manager-close-width;
+        height:@file-manager-close-width;
+        svg {
+          width: @file-manager-close-width;
+          height: @file-manager-close-width;
+          path {
+            fill: @file-manager-close-color;
+          }
+        }
+      }
+    }
+    .content {
+      padding: @file-manager-modal-padding;
+    }
+    #file-manager > .fit(@file-manager-modal-padding, @file-manager-modal-padding, @file-manager-modal-padding, @file-manager-modal-padding);
+    background-color: @file-manager-content-background;
+  }
+}

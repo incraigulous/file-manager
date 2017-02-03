@@ -1,0 +1,85 @@
+@import "variables";
+
+#file-manager {
+  .fit(@top: 0; @right: 0; @bottom: 0; @left: 0) {
+    top: @top;
+    right: @right;
+    bottom: @bottom;
+    left: @left;
+    position: absolute;
+  }
+
+  .fit-fixed(@top: 0; @right: 0; @bottom: 0; @left: 0) {
+    .fit(@top, @right, @bottom, @left);
+    position: fixed;
+  }
+
+  .top-left(@top: 0; @left: 0) {
+    top: @top;
+    left: @left;
+    position: absolute;
+  }
+
+  .top-right(@top: 0; @right: 0) {
+    top: @top;
+    right: @right;
+    position: absolute;
+  }
+
+  .transition(@duration: 1s) {
+    transition: all @duration;
+  }
+
+  //Center the element absolutely inside the first parent with positioning.
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform:translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  //Put the element at the center/right inside the first parent with positioning.
+  .right(@right: 0, @top: 50%) {
+    position: absolute;
+    top: @top;
+    right: @right;
+    -ms-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -o-transform:translate(0, -50%);
+    transform: translate(0, -50%);
+  }
+
+  //Put the element at the middle/left inside the first parent with positioning.
+  .left(@left: 0, @top: 50%) {
+    position: absolute;
+    top: @top;
+    left: @left;
+    -ms-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -o-transform:translate(0, -50%);
+    transform: translate(0, -50%);
+  }
+
+  //Put the element at the middle/top inside the first parent with positioning.
+  .top(@top: 0, @left: 50%) {
+    position: absolute;
+    top: @top;
+    left: @left;
+    -ms-transform: translate(-@left, 0);
+    -webkit-transform: translate(-@left,  0);
+    -moz-transform: translate(-@left, 0);
+    -o-transform:translate(-@left,  0);
+    transform: translate(-@left,  0);
+  }
+
+  .cheat(@by: @file-manager-spacing-base) {
+    margin: -@by -@by -@by -@by;
+    padding: @by @by @by @by;
+  }
+}
